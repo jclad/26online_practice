@@ -172,6 +172,43 @@ img {
   text-decoration: none;
 }
 
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.social-icon-link:hover .social-icon,
+.social-icon-link:focus .social-icon {
+  fill: var(--accent-color);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--dark-color);
+}
+.orange-icon {
+  justify-content: flex-start;
+}
+
+.orange-icon .social-icon {
+  fill: orange;
+}
+
 .contacts-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -219,18 +256,24 @@ img {
   letter-spacing: 0.02em;
 }
 
-.page-header {
+.hero-header {
+  background-image: url(../images/hero/slider-img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 115px;
+}
+
+.top-header {
   padding-top: 32px;
   padding-bottom: 32px;
   background: #191c2633;
 }
 
-.page-header .flexbox {
+.top-header.flexbox {
   justify-content: flex-end;
   align-items: center;
 }
 
-.page-header .phone-link {
+.top-header .phone-link {
   margin-right: 40px;
 }
 
@@ -241,7 +284,16 @@ img {
 }
 
 .hero {
-  background: rgba(25, 28, 38, 0.2);
+  padding-top: 150px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+}
+
+.price {
+  background-image: url(../images/price/price-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .price .line {
@@ -252,6 +304,11 @@ img {
 .price-list {
   width: 50%;
   padding: 30px 40px;
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
@@ -327,7 +384,9 @@ img {
 }
 
 .contacts {
+  background-image: url(../images/contacts/Bg.png);
   padding-left: 100px;
+  padding-right: 50px;
 }
 
 .contacts .work-time {
@@ -346,7 +405,7 @@ img {
 /* theme */
 
 .dark-bg {
-  background: #191c26;
+  background-color: #191c26;
   color: var(--grey);
 }
 
