@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>BarberShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="hero-header">
+    <header class="header">
       <div class="top-header container flexbox">
         <nav class="navigation">
           <a href="./" class="logo"><img src="./images/logo.png" alt="Логотип BarberShop"/></a>
@@ -22,25 +23,28 @@
           </ul>
         </nav>
         <a href="tel:+380441111111" class="link phone-link">+38 044 111 11 11</a>
-        <button class="btn">Онлайн запись</button>
+        <button class="btn" data-modal-open>Онлайн запись</button>
       </div>
-
+    </header>
+    <section class="hero">
       <div class="container">
-        <section class="hero">
+        <div class="hero-sidebar">
+          <ul class="list social-list">
+            <li class="social-item">
+              <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">Instagram</a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Ютуб">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <section class="hero-content">
           <p class="title-label">A hair salon for men in Kyiv</p>
           <h1 class="page-title">BarberShop</h1>
           <p class="section-description">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
         </section>
-        <ul class="list social-list">
-          <li class="social-item">
-            <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">Instagram</a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Ютуб">Youtube</a>
-          </li>
-        </ul>
       </div>
-    </header>
+    </section>
     <section class="section about-us">
       <div class="container flexbox">
         <ul class="list flexbox content-box">
@@ -119,7 +123,7 @@
             <img src="./images/team/img1.jpg" width="370" height="346" alt="барбер Джон Смит" />
             <h3 class="member-name" lang="en">John Smith</h3>
             <p class="member-position" lang="en">Extreme Barber</p>
-            <ul class="list social-icon-list orange-icon">
+            <ul class="list social-icon-list">
               <li class="social-icon-item">
                 <a class="social-icon-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="ссылка Инстаграм">
                   <svg class="social-icon">
@@ -232,14 +236,6 @@
           <li class="gallery-item"><img src="./images/gallery/img2.jpg" width="270" height="360" alt="услуги барбера" /></li>
           <li class="gallery-item"><img src="./images/gallery/img3.jpg" width="270" height="360" alt="модная мужская стрижка " /></li>
           <li class="gallery-item"><img src="./images/gallery/img4.jpg" width="270" height="360" alt="бритье опасной бритвой" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img1.jpg" width="270" height="360" alt="современная мужская стрижка" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img2.jpg" width="270" height="360" alt="услуги барбера" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img3.jpg" width="270" height="360" alt="модная мужская стрижка " /></li>
-          <li class="gallery-item"><img src="./images/gallery/img4.jpg" width="270" height="360" alt="бритье опасной бритвой" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img1.jpg" width="270" height="360" alt="современная мужская стрижка" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img2.jpg" width="270" height="360" alt="услуги барбера" /></li>
-          <li class="gallery-item"><img src="./images/gallery/img3.jpg" width="270" height="360" alt="модная мужская стрижка " /></li>
-          <li class="gallery-item"><img src="./images/gallery/img4.jpg" width="270" height="360" alt="бритье опасной бритвой" /></li>
         </ul>
       </div>
     </section>
@@ -287,15 +283,12 @@
         </div>
       </div>
     </footer>
-
-    <svg class="icon">
-      <use href="./images/icons/sprite.svg#mail"></use>
-    </svg>
-    <svg class="icon">
-      <use href="./images/icons/sprite.svg#map-pin"></use>
-    </svg>
-    <svg class="icon">
-      <use href="./images/icons/sprite.svg#phone"></use>
-    </svg>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal dark-bg">
+        <button class="btn-close" data-modal-close>x</button>
+        <p>Modal Window</p>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
