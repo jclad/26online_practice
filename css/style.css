@@ -50,6 +50,21 @@ img {
   height: auto;
 }
 
+textarea {
+  resize: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .link {
   transition: color 350ms;
 }
@@ -147,6 +162,12 @@ img {
   color: var(--dark-color);
 }
 
+.btn-submit:disabled {
+  background-color: #ccc;
+  border-color: #f7f7f7;
+  color: #f7f7f7;
+}
+
 .address {
   font-style: normal;
 }
@@ -235,6 +256,115 @@ img {
 
 .orange-icon .social-icon {
   fill: orange;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+.form-field-label {
+  width: calc((100% - 30px) / 2);
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.form-field {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  background-color: transparent;
+
+  outline: none;
+}
+
+.form-field-icon {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  fill: rgba(157, 164, 189, 0.4);
+}
+
+.form-field:not(:placeholder-shown),
+.form-field:focus {
+  border-bottom-color: #fff;
+}
+
+.form-field:not(:placeholder-shown) ~ .form-field-icon,
+.form-field:focus ~ .form-field-icon {
+  fill: #fff;
+}
+
+.form-field-label > .form-field {
+  width: 100%;
+}
+
+.form-field:not(textarea) {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: calc((100% - 30px) / 2);
+}
+
+.form-field::placeholder {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.form-field:not(:placeholder-shown):focus:valid {
+  color: green;
+  border-bottom-color: green;
+}
+
+.form-field:not(:placeholder-shown):focus:valid ~ .form-field-icon {
+  fill: green;
+}
+
+.form-field:not(:placeholder-shown):focus:invalid {
+  color: tomato;
+  border-bottom-color: tomato;
+}
+
+.form-field:not(:placeholder-shown):focus:invalid ~ .form-field-icon {
+  fill: tomato;
+}
+
+.checkbox-label {
+  width: 100%;
+  margin: 44px 0;
+}
+
+.checkbox-label a {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.checkbox-label span::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.checkbox:checked ~ span::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .contacts-item:not(:last-child) {

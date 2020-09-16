@@ -244,6 +244,31 @@
         <div class="container flexbox">
           <section class="section content-box contact-us ">
             <h2 class="section-title white-title">Онлайн-запись</h2>
+            <form action="" class="form" id="contact-form">
+              <label for="user-name" class="form-field-label">
+                <input
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  class="form-field"
+                  placeholder="Имя*"
+                  pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+                  autocomplete="off"
+                  required
+                />
+                <svg class="form-field-icon" width="12" height="12">
+                  <use href="./images/icons/sprite.svg#twitter"></use>
+                </svg>
+              </label>
+              <input type="tel" name="user-phone" class="form-field" placeholder="Телефон*" pattern="[0-9]{10,12}" autocomplete="off" required />
+              <textarea name="user-message" class="form-field" placeholder="Сообщение" rows="5"></textarea>
+              <label for="checkbox" class="checkbox-label">
+                <input type="checkbox" class="checkbox visually-hidden" id="checkbox" checked />
+                <span>Я согласен с</span>
+                <a href="" class="link">условиями соглашения</a>
+              </label>
+              <button type="submit" class="btn btn-submit">Отправить</button>
+            </form>
           </section>
           <section class="section content-box contacts">
             <h2 class="section-title white-title">Контакты</h2>
@@ -283,12 +308,12 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal dark-bg">
         <button class="btn-close" data-modal-close>x</button>
         <p>Modal Window</p>
       </div>
-    </div>
+    </div> -->
     <script src="./js/script.js"></script>
   </body>
 </html>
