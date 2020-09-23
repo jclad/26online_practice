@@ -1,0 +1,16 @@
+.footer-bottom {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-bottom .flexbox {
+  justify-content: space-between;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  color: $grey;
+}

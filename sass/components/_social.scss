@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social:before,
+.title-label:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: $dark-color;
+}
+
+.social__item:first-child {
+  margin-left: 40px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.social__link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $dark-color;
+  text-decoration: none;
+}

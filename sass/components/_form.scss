@@ -1,0 +1,102 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 10px;
+
+  &__field-label {
+    width: calc((100% - 30px) / 2);
+    position: relative;
+    margin-bottom: 44px;
+  }
+
+  &__field {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    background-color: transparent;
+
+    outline: none;
+    &:not(:placeholder-shown),
+    &:focus {
+      border-bottom-color: #fff;
+    }
+
+    &:not(:placeholder-shown) ~ &__field-icon,
+    &:focus ~ &__field-icon {
+      fill: #fff;
+    }
+
+    &-label > & {
+      width: 100%;
+    }
+
+    &:not(textarea) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: calc((100% - 30px) / 2);
+    }
+
+    &::placeholder {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: rgba(157, 164, 189, 0.4);
+    }
+
+    &:not(:placeholder-shown):focus:valid {
+      color: green;
+      border-bottom-color: green;
+    }
+
+    &:not(:placeholder-shown):focus:valid ~ &__field-icon {
+      fill: green;
+    }
+
+    &:not(:placeholder-shown):focus:invalid {
+      color: tomato;
+      border-bottom-color: tomato;
+    }
+
+    &:not(:placeholder-shown):focus:invalid ~ &__field-icon {
+      fill: tomato;
+    }
+  }
+
+  &__field-icon {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    fill: rgba(157, 164, 189, 0.4);
+  }
+
+  &__checkbox-label {
+    width: 100%;
+    margin: 44px 0;
+  }
+
+  &__checkbox-text::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  &__checkbox:checked ~ &__checkbox-text::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+}

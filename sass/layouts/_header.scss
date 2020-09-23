@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &__flexbox {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__phone-link {
+    margin-right: 40px;
+    @extend %placeholder-text;
+  }
+}

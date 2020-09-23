@@ -1,0 +1,27 @@
+.social-icons {
+  @include flexbox(center);
+}
+
+.social-icons__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons__link {
+  @include flexbox(center, center);
+  width: 44px;
+  height: 44px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.social-icons__link:hover .social-icons,
+.social-icons__link:focus .social-icons__icon {
+  fill: $accent-color;
+}
+
+.social-icons__icon {
+  width: 20px;
+  height: 20px;
+  fill: $dark-color;
+  transition: fill 0.5s ease-out;
+}

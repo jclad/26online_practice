@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @include font(14px, 1.625);
+  letter-spacing: 0.02em;
+  color: $main-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.link {
+  transition: color 350ms;
+}
+
+.link:hover,
+.link:focus {
+  color: $accent-color;
+}
+
+.link--accent {
+  color: $accent-color;
+  font-style: italic;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.address {
+  font-style: normal;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.content-box {
+  width: calc((100% - 30px) / 2);
+}
+
+.content-box:not(:last-child) {
+  margin-right: 30px;
+}
+
+.page__title {
+  font-family: "Raleway", sans-serif;
+  @include font(72px, 1.18, 700);
+  letter-spacing: 0.05em;
+  color: $white;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.title-label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $dark-color;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.title-label:before {
+  margin-right: 20px;
+}

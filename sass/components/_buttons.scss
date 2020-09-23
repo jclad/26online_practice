@@ -1,0 +1,34 @@
+%placeholder-text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: $white;
+}
+
+.btn {
+  @extend %placeholder-text;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  padding: 12px 20px;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    transition: background-color 0.5s;
+  }
+
+  &--dark {
+    color: $dark-color;
+  }
+
+  &--submit:disabled {
+    background-color: #ccc;
+    border-color: #f7f7f7;
+    color: #f7f7f7;
+  }
+}

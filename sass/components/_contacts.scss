@@ -1,0 +1,14 @@
+.contacts__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts__link {
+  text-decoration: none;
+}
+
+.contacts__link,
+.price-list {
+  font-size: 18px;
+  line-height: 1.389;
+  color: $grey;
+}

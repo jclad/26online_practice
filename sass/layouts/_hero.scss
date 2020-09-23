@@ -1,0 +1,37 @@
+.hero {
+  color: $grey;
+}
+
+.hero .title-label {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero .title-label:before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.hero__container {
+  display: flex;
+  background-image: url(../images/hero/slider-img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: top 0 left 115px;
+}
+
+.hero__content {
+  max-width: 50%;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 115px;
+}
+
+.hero__sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  padding-bottom: 65px;
+}
+
+.hero__social {
+  transform: rotate(-90deg) translate(50%, calc(50% - 30px));
+}
