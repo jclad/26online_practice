@@ -6,11 +6,12 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  outline: 2px solid red;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  @include font(14px, 1.625);
+  @include font(14px, 1.625, 400);
   letter-spacing: 0.02em;
   color: $main-color;
 }
@@ -61,15 +62,29 @@ textarea {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1280px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .flexbox {
-  display: flex;
+  // display: flex;
 }
 
 .content-box {
