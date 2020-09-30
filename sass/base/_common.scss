@@ -6,7 +6,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  outline: 2px solid red;
+  // outline: 2px solid red;
 }
 
 body {
@@ -77,34 +77,39 @@ textarea {
   }
 
   @include for-size(desktop) {
-    width: 1280px;
+    width: 1200px;
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 .flexbox {
-  // display: flex;
+  @include for-size(tablet) {
+    display: flex;
+     justify-content: space-between;
+  }
 }
 
 .content-box {
-  width: calc((100% - 30px) / 2);
-}
-
-.content-box:not(:last-child) {
-  margin-right: 30px;
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .page__title {
   font-family: "Raleway", sans-serif;
-  @include font(72px, 1.18, 700);
+  @include font(48px, 1.18, 700);
   letter-spacing: 0.05em;
   color: $white;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @include for-size(desktop) {
+    font-size: 72px;
+  }
 }
 
-.title-label {
+.block__label {
   display: inline-flex;
   align-items: center;
   font-weight: 600;
@@ -117,6 +122,15 @@ textarea {
   margin-bottom: 20px;
 }
 
-.title-label:before {
+.block__label:before,
+.social:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.block__label:before {
   margin-right: 20px;
 }

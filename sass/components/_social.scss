@@ -3,15 +3,6 @@
   align-items: center;
 }
 
-.social:before,
-.title-label:before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: $dark-color;
-}
-
 .social__item:first-child {
   margin-left: 40px;
 }

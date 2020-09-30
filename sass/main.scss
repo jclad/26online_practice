@@ -1,3 +1,4 @@
+@import "./utils/normalize";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/fonts";
@@ -14,6 +15,7 @@
 @import "./layouts/navigation";
 @import "./layouts/header";
 @import "./layouts/hero";
+@import "./layouts/about-us";
 @import "./layouts/price";
 @import "./layouts/team";
 @import "./layouts/gallery";

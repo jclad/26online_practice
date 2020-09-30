@@ -12,16 +12,17 @@
 
 .hero__container {
   display: flex;
-  background-image: url(../images/hero/slider-img-3.jpg);
+  background-image: url(../images/hero/3.jpg);
   background-repeat: no-repeat;
-  background-position: top 0 left 115px;
+  // background-position: top 0 left 115px;
+  background-color: black;
 }
 
 .hero__content {
-  max-width: 50%;
+  // max-width: 50%;
   padding-top: 272px;
   padding-bottom: 206px;
-  padding-left: 115px;
+  // padding-left: 115px;
 }
 
 .hero__sidebar {

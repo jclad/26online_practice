@@ -1,5 +1,35 @@
+.navigation-wrap {
+  @include for-size(mobile-only) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    height: 100vh;
+    padding: 118px 40px;
+    background-color: white;
+    z-index: 5;
+    transition: 1s linear;
+
+    .menu__link,
+    .btn,
+    .header__phone-link {
+      color: black;
+    }
+  }
+  &.is-open {
+    right: 0;
+    opacity: 1;
+  }
+}
+
 .navigation {
-  display: flex;
-  align-items: center;
+  // align-items: center;
   margin-right: auto;
+}
+
+.burger {
+  position: relative;
+  z-index: 10;
 }

@@ -3,8 +3,10 @@
   padding-bottom: 56px;
 }
 
-.footer-bottom .flexbox {
+.footer-bottom .container {
+  display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .copyright {

@@ -13,17 +13,20 @@
   <body class="page">
     <header class="header">
       <div class="container flexbox header__flexbox">
-        <nav class="navigation">
-          <a href="./" class="logo"><img src="./images/logo.png" alt="Логотип BarberShop"/></a>
-          <ul class="list menu">
-            <li class="menu__item"><a href="#" class="link menu__link">О нас</a></li>
-            <li class="menu__item"><a href="#" class="link menu__link">Услуги и цены</a></li>
-            <li class="menu__item"><a href="#" class="link menu__link">Мастера</a></li>
-            <li class="menu__item"><a href="#" class="link menu__link">Контакты</a></li>
-          </ul>
-        </nav>
-        <a href="tel:+380441111111" class="link header__phone-link">+38 044 111 11 11</a>
-        <button class="btn" data-modal-open>Онлайн запись</button>
+        <a href="./" class="logo"><img src="./images/logo.png" alt="Логотип BarberShop"/></a>
+        <button class="burger">x</button>
+        <div class="navigation-wrap is-open">
+          <nav class="navigation">
+            <ul class="list menu">
+              <li class="menu__item"><a href="#" class="link menu__link">О нас</a></li>
+              <li class="menu__item"><a href="#" class="link menu__link">Услуги и цены</a></li>
+              <li class="menu__item"><a href="#" class="link menu__link">Мастера</a></li>
+              <li class="menu__item"><a href="#" class="link menu__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <a href="tel:+380441111111" class="link header__phone-link">+38 044 111 11 11</a>
+          <button class="btn" data-modal-open>Онлайн запись</button>
+        </div>
       </div>
     </header>
     <section class="hero">
@@ -39,7 +42,7 @@
           </ul>
         </div>
         <section class="hero__content">
-          <p class="title-label">A hair salon for men in Kyiv</p>
+          <p class="block__label block__label--dark-bg">A hair salon for men in Kyiv</p>
           <h1 class="page__title">BarberShop</h1>
           <p class="section__description">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
         </section>
@@ -52,7 +55,7 @@
           <li class="content-box"><img src="./images/about/img2.jpg" width="270" height="445" alt="модная мужская стрижка 2020" /></li>
         </ul>
         <div class="content-box">
-          <p class="title-label">О нас</p>
+          <p class="block__label">О нас</p>
           <h2 class="section__title">Лучший Барбершоп твоего города</h2>
           <p class="section__description">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
           <p>
@@ -64,11 +67,11 @@
         </div>
       </div>
     </section>
-    <section class="section price dark-bg">
+    <section class="section block price block--dark-bg">
       <div class="container">
-        <p class="title-label">Проведи время в компании лучших мастеров</p>
-        <h2 class="section__title">Услуги и цены</h2>
-        <div class="flexbox">
+        <p class="block__label block__label--dark-bg">Проведи время в компании лучших мастеров</p>
+        <h2 class="section__title section__title--dark-bg">Услуги и цены</h2>
+        <div class="flexbox price-list-wrap">
           <ul class="list price__list">
             <li class="price__item"><span>Мужская стрижка </span> <span class="price__item-line"></span> <span> от 300 грн.</span></li>
             <li class="price__item"><span>Стрижка бороды </span><span class="price__item-line"></span><span> от 200 грн.</span></li>
@@ -108,7 +111,7 @@
           </ul>
         </div>
         <div class="content-box">
-          <p class="title-label">старая традиционная школа</p>
+          <p class="block__label">старая традиционная школа</p>
           <h2 class="section__title">Почему приходят именно к нам?</h2>
           <p class="section__description">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
         </div>
@@ -116,11 +119,17 @@
     </section>
     <section class="section team">
       <div class="container">
-        <p class="title-label">для настоящих ценителей атмосферы</p>
+        <p class="block__label">для настоящих ценителей атмосферы</p>
         <h2 class="section__title">Наши мастера</h2>
         <ul class="list team__list">
           <li class="team__item">
-            <img src="./images/team/img1.jpg" width="370" height="346" alt="барбер Джон Смит" />
+            <picture>
+              <source srcset="./images/team/desktop/img1.jpg 1x, ./images/team/desktop/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/img1.jpg 1x, ./images/team/tablet/img1@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/img1.jpg 1x, ./images/team/mobile/img1@2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/team/desktop/img1.jpg" width="370" height="346" alt="барбер Джон Смит" />
+            </picture>
+
             <h3 class="team__member-name" lang="en">John Smith</h3>
             <p class="team__member-position" lang="en">Extreme Barber</p>
             <ul class="list social-icons">
@@ -161,7 +170,12 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/team/img2.jpg" width="370" height="346" alt="барбер Майкл Доу" />
+            <picture>
+              <source srcset="./images/team/desktop/img2.jpg 1x, ./images/team/desktop/img2@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/img2.jpg 1x, ./images/team/tablet/img2@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/img2.jpg 1x, ./images/team/mobile/img2@2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/team/desktop/img2.jpg" width="370" height="346" alt="барбер Майкл Доу" />
+            </picture>
             <h3 class="team__member-name" lang="en">Michele Doe</h3>
             <p class="team__member-position" lang="en">Extreme Barber</p>
             <ul class="list social-icons">
@@ -202,7 +216,12 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/team/img3.jpg" width="370" height="346" alt="барбер Алан Блэк" />
+            <picture>
+              <source srcset="./images/team/desktop/img3.jpg 1x, ./images/team/desktop/img3@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/img3.jpg 1x, ./images/team/tablet/img3@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/img3.jpg 1x, ./images/team/mobile/img3@2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/team/desktop/img3.jpg" width="370" height="346" alt="барбер Алан Блэк" />
+            </picture>
             <h3 class="team__member-name" lang="en">Alan Black</h3>
             <p class="team__member-position" lang="en">Extreme Barber</p>
             <ul class="list social-icons">
@@ -247,21 +266,45 @@
     </section>
     <section class="section gallery">
       <div class="container">
-        <p class="title-label">На латинском языке “барба” означает “борода”</p>
+        <p class="block__label">На латинском языке “барба” означает “борода”</p>
         <h2 class="section__title" hidden>Галерея</h2>
         <ul class="list gallery__list">
-          <li class="gallery__item"><img src="./images/gallery/img1.jpg" width="270" height="360" alt="современная мужская стрижка" /></li>
-          <li class="gallery__item"><img src="./images/gallery/img2.jpg" width="270" height="360" alt="услуги барбера" /></li>
-          <li class="gallery__item"><img src="./images/gallery/img3.jpg" width="270" height="360" alt="модная мужская стрижка " /></li>
-          <li class="gallery__item"><img src="./images/gallery/img4.jpg" width="270" height="360" alt="бритье опасной бритвой" /></li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="./images/gallery/img1.webp 1x, ./images/gallery/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/gallery/img1-tablet.jpg 1x, ./images/gallery/img1@2x-tablet.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/gallery/img1-mobile.jpg 1x, ./images/gallery/img1@2x-mobile.jpg 2x" media="(max-width: 767px)" />
+
+              <source srcset="./images/gallery/img1.jpg 1x, ./images/gallery/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/gallery/img1-tablet.jpg 1x, ./images/gallery/img1@2x-tablet.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/gallery/img1-mobile.jpg 1x, ./images/gallery/img1@2x-mobile.jpg 2x" media="(max-width: 767px)" />
+
+              <img src="./images/gallery/img1.jpg" width="418" height="360" alt="современная мужская стрижка" />
+            </picture>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="./images/gallery/img1.jpg 1x, ./images/gallery/img1@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/gallery/img1-tablet.jpg 1x, ./images/gallery/img1@2x-tablet.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/gallery/img1-mobile.jpg 1x, ./images/gallery/img1@2x-mobile.jpg 2x" media="(max-width: 767px)" />
+
+              <img src="./images/gallery/img1.jpg" width="270" height="360" alt="современная мужская стрижка" />
+            </picture>
+          </li>
+          <li class="gallery__item">
+            <img src="./images/gallery/img3.jpg" width="270" height="360" alt="модная мужская стрижка " />
+          </li>
+          <li class="gallery__item">
+            <img src="./images/gallery/img4.jpg" width="270" height="360" alt="бритье опасной бритвой" />
+          </li>
         </ul>
       </div>
     </section>
     <footer>
-      <div class="dark-bg">
+      <div class="block--dark-bg">
         <div class="container flexbox">
           <section class="section content-box contact-us ">
-            <h2 class="section__title white-title">Онлайн-запись</h2>
+            <h2 class="section__title section__title--dark-bg">Онлайн-запись</h2>
             <form action="#" class="form" id="contact-form">
               <label for="user-name" class="form__field-label">
                 <input
@@ -289,7 +332,7 @@
             </form>
           </section>
           <section class="section content-box contacts">
-            <h2 class="section__title white-title">Контакты</h2>
+            <h2 class="section__title section__title--dark-bg">Контакты</h2>
             <address class="address">
               <ul class="list contacts__list">
                 <li class="contacts__item">
@@ -306,7 +349,7 @@
               </ul>
             </address>
             <div class="work-time">
-              <p class="title-label">Рабочее время</p>
+              <p class="block__label">Рабочее время</p>
               <p>Ежедневно с 9:00 до 22:00</p>
             </div>
           </section>
@@ -315,23 +358,24 @@
       <div class="footer-bottom">
         <div class="container flexbox">
           <span class="copyright">&copy; Copyright 2020</span>
-          <ul class="list social-list flexbox">
-            <li class="social-item">
-              <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">Instagram</a>
+          <ul class="list social flexbox">
+            <li class="social__item">
+              <a href="#" class="link social__link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">Instagram</a>
             </li>
-            <li class="social-item">
-              <a href="#" class="link social-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Ютуб">Youtube</a>
+            <li class="social__item">
+              <a href="#" class="link social__link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Ютуб">Youtube</a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
     <!-- <div class="backdrop is-hidden" data-modal>
-      <div class="modal dark-bg">
+      <div class="modal block--dark-bg">
         <button class="btn-close" data-modal-close>x</button>
         <p>Modal Window</p>
       </div>
     </div> -->
+
     <script src="./js/script.js"></script>
   </body>
 </html>

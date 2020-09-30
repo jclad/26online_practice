@@ -16,7 +16,7 @@
   $desktop: 1280px;
 
   @if $range == mobile-only {
-    @media (max-width: #{$mobile - 1}) {
+    @media (max-width: #{$mobile}) {
       @content;
     }
   } @else if $range == mobile {
@@ -25,6 +25,10 @@
     }
   } @else if $range == tablet {
     @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $range == tablet-only {
+    @media (max-width: #{$tablet - 1}) {
       @content;
     }
   } @else if $range == desktop {

@@ -1,12 +1,12 @@
-.dark-bg {
+.block--dark-bg {
   background-color: #191c26;
   color: $grey;
 }
 
-.dark-bg .section-title {
+.section__title--dark-bg {
   color: $white;
 }
 
-.dark-bg .title-label {
+.block__label--dark-bg {
   color: rgba(157, 164, 189, 0.6);
 }

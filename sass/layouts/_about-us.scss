@@ -1,0 +1,5 @@
+.about-us .list {
+  @include for-size(tablet-only) {
+    display: none;
+  }
+}

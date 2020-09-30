@@ -1,8 +1,28 @@
 .price {
-  background-image: url(../images/price/price-bg.png);
+  background-image: url(../images/price/price-bg-480.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    background-image: url(../images/price/price-bg-480@2x.jpg);
+  }
+
+  @include for-size(tablet) {
+    background-image: url(../images/price/price-bg-768.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/price-bg-768@2x.jpg);
+    }
+  }
+
+  @include for-size(desktop) {
+    background-image: url(../images/price/price-bg.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/price-bg@2x.jpg);
+    }
+  }
 }
 
 .price__item-line {
@@ -10,14 +30,24 @@
   border-bottom: 1px solid rgba(157, 164, 189, 0.12);
 }
 
-.price__list {
-  width: 50%;
-  padding: 30px 40px;
+.price-list-wrap {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @include for-size(desktop) {
+    background-image: none;
+  }
 }
 
-.price__list:last-child {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+.price__list {
+  padding: 30px 40px;
+
+  @include for-size(desktop) {
+    width: 50%;
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+    &:last-child {
+      background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
+  }
 }
 
 .price__item {
